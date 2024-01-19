@@ -1,0 +1,203 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[
+10pt,
+aspectratio=169,
+]{beamer}
+\setbeamercovered{transparent=10}
+\usetheme[
+%  showheader,
+%  red,
+  purple,
+%  gray,
+%  graytitle,
+  colorblocks,
+%  noframetitlerule,
+]{Verona}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\definecolor{col}{RGB}{4,74,21}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mac上使用如下命令声明隶书字体，windows也有相关方式，大家可自行修改
+\providecommand{\lishu}{\CJKfamily{zhli}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+%
+%\setbeamertemplate{sections/subsections in toc}[ball]
+\usepackage{xeCJK}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usefonttheme{professionalfonts}
+\def\mathfamilydefault{\rmdefault}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{bm}
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+\setbeamerfont{subsection in toc}{size=\small}
+\AtBeginSection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection]} %
+	\end{frame}%
+}
+
+\AtBeginSubsection[]{%
+	\begin{frame}%
+		\frametitle{Outline}%
+		\textbf{\tableofcontents[currentsection, currentsubsection]} %
+	\end{frame}%
+}
+
+\title{Beamer for SYSU}
+\subtitle{Sub-Title}
+\author[TY.Qi]{Tianyu Qi}
+\mail{qitianyuqty@163.com}
+\institute[Sun Yat-sen University]{School of Cyber Science and Technology\\
+Sun Yat-sen University}
+\date{\today}
+\titlegraphic[width=3cm]{sysu_logo}{}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- 标题页 ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+\maketitle
+
+%%% define code
+\defverbatim[colored]\lstI{
+	\begin{lstlisting}[language=C++,basicstyle=\ttfamily,keywordstyle=\color{red}]
+	int main() {
+	// Define variables at the beginning
+	// of the block, as in C:
+	CStash intStash, stringStash;
+	int i;
+	char* cp;
+	ifstream in;
+	string line;
+	[...]
+	\end{lstlisting}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- Temp ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{exampleblock}{title}
+% 		xxx
+% 	\end{exampleblock}
+
+% \begin{columns}[onlytextwidth]
+% 		\begin{column}{.5\textwidth}
+% 		\end{column}
+% \end{columns}
+
+% \begin{figure}
+% 		\centering
+% 		\includegraphics[width=0.8\linewidth]{fig/intro_private.png}
+% 		\caption{Privacy security policy}
+% \end{figure}
+
+% \begin{equation*}
+% 		w=\sum _{j=1}^{M}\frac{\left | \mathcal{D}_j \right | w_j^e}{\sum _{j=1}^{M}\left | \mathcal{D}_j \right |}
+% \end{equation*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------- FRAME ------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Basics}
+\subsection{Blocks}
+\begin{frame}[c]{Blocks}
+	
+The blocks are shown below
+\begin{block}{Regular Block}
+	Content of a regular block
+\end{block}
+
+\begin{exampleblock}{Example Block}
+	Content of an example block
+\end{exampleblock}
+
+\begin{alertblock}{Alert block}
+	Content of an alert block
+\end{alertblock}
+
+\end{frame}	
+
+\subsection{Enumerate \& Overlays}
+
+\begin{frame}[c]{Enumerate \& Overlays}
+	
+{\large An Example of \texttt{enumerate}}
+	\begin{enumerate}[<+->]
+		\item First item
+		\item Second item
+		\item Third item
+	\end{enumerate}
+\vfill
+{\large An Example of \texttt{itemize}}	
+	\begin{itemize}[<+->]
+	\item First item
+	\item Second item
+	\item Third item
+	\end{itemize}
+\end{frame}	
+
+\subsection{Two columns}
+\begin{frame}[c]{Two columns}
+	
+\begin{columns}[onlytextwidth]
+	\column{0.4\textwidth}
+	Content for column one
+	\begin{equation}
+	E = mc^2
+	\end{equation}
+	\column{0.4\textwidth}	
+	Content for column two
+	\begin{equation}
+	F=ma
+	\end{equation}
+\end{columns}
+	
+\end{frame}	
+
+\subsection{Figures}
+\begin{frame}[c]{Figures}
+	\begin{figure}
+		\centering
+		\begin{tikzpicture}
+		\draw [help lines,very thick] (0,0) grid (5,4);
+		\end{tikzpicture}
+		\caption{Credits to Ti\textit{k}Z}
+	\end{figure}
+\end{frame}	
+
+\begin{frame}{A Listings Demo}{C++}
+	\lstI
+\end{frame}
+% Thank you page
+\beamertemplateshadingbackground{structure.fg!90}{structure.fg}
+\begin{frame}[plain]
+	\vfill
+	\centering
+	{
+		\centering \Huge \color{white} Thank you for your attention!\\[10pt]Questions?
+	}
+	\vfill
+\end{frame}
+
+\end{document}
+
+
