@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="sysu_horizontal.png" alt="BIThesis Icon">
+  <img src="sysu_horizontal.png" alt="BIThesis Icon" width="280">
 
 <h2>介绍</h2>
 
@@ -9,6 +9,6 @@ Applicable to academic and research presentations at Sun Yat-sen University, inc
 
 <h2>链接Links</h2>
 
-[Beamer for BIT]([https://www.overleaf.com/latex/templates/beamer-for-buct/rndypbwvfxrp](https://github.com/CharlieLeee/My_Beamer_Template))
+[Beamer for BIT](https://github.com/CharlieLeee/My_Beamer_Template)
 
 [Beamer for BUCT](https://www.overleaf.com/latex/templates/beamer-for-buct/rndypbwvfxrp)
