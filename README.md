@@ -7,6 +7,8 @@
 
 An unofficial Latex Beamer template for Sun Yat-sen University, with support for bilingual content. Applicable to academic and research presentations at Sun Yat-sen University, including seminars and defenses, this document is adapted from the BIT Beamer template on Overleaf and the Beamer Template for BUCT.
 
+Overleaf：[Link](https://www.overleaf.com/latex/templates/sysu-beamer-template/sbwbpgzvfvnf)
+
 <div align="center">
   <img src="fig/page1.png" alt="page1" width="500">
 
